@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Utilities : MonoBehaviour
 {
@@ -13,5 +14,9 @@ public class Utilities : MonoBehaviour
     {
         Application.Quit();
 
+    }
+    public void toMainGame()
+    {
+        SceneManager.LoadScene("Main Game");
     }
 }

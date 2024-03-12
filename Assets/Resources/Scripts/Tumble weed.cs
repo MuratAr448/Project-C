@@ -9,16 +9,14 @@ public class Tumbleweed : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        //rb.AddForce(0f, 0f, Random.Range(-1.0f, -0.5f), ForceMode.Impulse);
+        rb.AddForce(0f, 0f, Random.Range(-1.0f, -0.5f), ForceMode.Impulse);
     }
-
-    // Update is called once per frame
     void Update()
     {
         transform.Rotate(-spin, 0, 0);
     }
     void OnCollisionEnter(Collision collision)
     {
-        //Destroy(gameObject);
+        Destroy(gameObject);
     }
 }
